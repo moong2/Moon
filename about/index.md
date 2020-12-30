@@ -6,7 +6,7 @@ date: 2020-12-30
 comments: false
 ---
     
-<center><a href="http://taylantatli.github.io/Moon">Hi, I'm programmer mg2. I major in Software.</center>
+<center>Hi, I'm programmer mg2. I major in Software.</center>
 
 ## Features
 * ParkSoomin
