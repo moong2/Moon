@@ -25,7 +25,6 @@ comments: false
 {% capture images %}
 
 {% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
 
 See a [my repo](http://github.com/moong2) hosted on GitHub.
 
