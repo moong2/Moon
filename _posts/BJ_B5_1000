@@ -7,14 +7,4 @@ tags: [BACKJOON, BRONZE5, 1000]
 comments: true
 ---
 
-{% highlight css %} 
-#include <iostream>
-using namespace std;
-
-int main()
-{
-	int A, B;
-	cin >> A >> B;
-	cout << A + B;
-} 
-{% endhighlight %}
+HI
