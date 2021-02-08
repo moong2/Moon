@@ -54,15 +54,9 @@ a, b = [ int(w) for w in input().split()]
 을 이용했습니다. 해당 문법은 for문으로 공백으로 구분된 str형 문자를 입력받고 그것을 int형으로 변환해 각 변수에 저장하는 역할을 합니다.
 
 ### 코드
-{% highlight css %}
-#한 줄에 주어지는 두 정수를 a와 b에 저장하고 
+{% highlight css %} 
 a, b = [int(w) for w in input().split()]
-
-#합을 구하여 answer에 저장하고
 answer = a + b
-
-
-#그 값을 출력한다
 print(a + b)
 {% endhighlight %}
 
