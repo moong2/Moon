@@ -32,3 +32,7 @@ Hello World!
 {% highlight css %}
 print("Hello World!")
 {% endhighlight %}
+
+#### 기타
+- `Memory` : 9368
+- `Time` : 0.02
