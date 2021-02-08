@@ -24,3 +24,11 @@ Hello World!
 {% endhighlight %}
 
 # 풀이
+
+#### 설명
+파이썬의 내장함수인 print를 이용해서 Hello World를 출력합니다.
+
+#### 코드
+{% highlight css %}
+print("Hello World!")
+{% endhighlight %}
