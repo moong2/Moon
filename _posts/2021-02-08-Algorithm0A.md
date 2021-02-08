@@ -18,7 +18,8 @@ comments: true
 한 줄에 Hello World!를 출력한다.
 - 단, 대소문자나 공백의 위치가 다른 문자는 오답으로 인정한다.
 
-#### 예시1
+#### 예시 1
+##### 출력
 {% highlight css %}
 Hello World!
 {% endhighlight %}
