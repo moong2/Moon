@@ -20,7 +20,7 @@ pre.highlight {
 	.k                 { color: #66d9ef }                            /* Keyword                     */
 	.l                 { color: #ae81ff }                            /* Literal                     */
 	.n                 { color: #f8f8f2 }                            /* Name                        */
-	.o                 { color: #ae81ff }                            /* Operator                    */
+	.o                 { color: white }                            /* Operator                    */
 	.p                 { color: #f8f8f2 }                            /* Punctuation                 */
 	.cm                { color: #75715e }                            /* Comment.Multiline           */
 	.cp                { color: #75715e }                            /* Comment.Preproc             */
@@ -49,7 +49,7 @@ pre.highlight {
 	.nn                { color: #f8f8f2 }                            /* Name.Namespace              */
 	.nx                { color: #a6e22e }                            /* Name.Other                  */
 	.py                { color: #f8f8f2 }                            /* Name.Property               */
-	.nt                { color: white }                            /* Name.Tag                    */
+	.nt                { color: white }                           	 /* Name.Tag                    */
 	.nv                { color: #f8f8f2 }                            /* Name.Variable               */
 	.ow                { color: #ae81ff }                            /* Operator.Word               */
 	.w                 { color: #f8f8f2 }                            /* Text.Whitespace             */
