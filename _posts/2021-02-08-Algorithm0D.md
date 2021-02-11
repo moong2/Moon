@@ -53,6 +53,5 @@ for elem in reversed(arr) : print(elem, end=' ')
 {% endhighlight %}
 
 ### 기타
-#### 반복문
 - `Memory` : 9525.3
 - `Time` : 0.02
