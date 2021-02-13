@@ -6,7 +6,7 @@ excerpt: "Python 알고리즘 문제해결기법 입문 문제1D"
 tags: [Python, 알고리즘 문제해결기법 입문, Chapter.1]
 comments: true
 ---
-# 0A
+# 1D
 
 ### 문제
 정수가 N개 주어진다. 이 N개의 정수의 합을 출력하는 프로그램을 작성하시오.

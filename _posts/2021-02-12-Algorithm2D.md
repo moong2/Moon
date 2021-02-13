@@ -6,7 +6,7 @@ excerpt: "Python 알고리즘 문제해결기법 입문 문제2D"
 tags: [Python, 알고리즘 문제해결기법 입문, Chapter.2]
 comments: true
 ---
-# 0A
+# 2D
 
 ### 문제
 두 문자열을 사전순으로 비교하는 함수를 작성해봅시다.

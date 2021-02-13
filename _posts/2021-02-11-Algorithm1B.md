@@ -6,7 +6,7 @@ excerpt: "Python 알고리즘 문제해결기법 입문 문제1B"
 tags: [Python, 알고리즘 문제해결기법 입문, Chapter.1]
 comments: true
 ---
-# 0A
+# 1B
 
 ### 문제
 32비트 int형 정수가 N개 주어진다. 이 때 N개의 정수 중 가장 큰 값을 출력하는 프로그램을 작성하시오.

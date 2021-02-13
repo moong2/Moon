@@ -6,7 +6,7 @@ excerpt: "Python 알고리즘 문제해결기법 입문 문제1A"
 tags: [Python, 알고리즘 문제해결기법 입문, Chapter.1]
 comments: true
 ---
-# 0A
+# 1A
 
 ### 문제
 정수 두 개를 입력받아서 더 큰 값을 출력하는 프로그램을 작성하시오.
