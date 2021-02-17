@@ -38,9 +38,41 @@ M개의 당첨번호 들 중 실제로 두 카드에 적힌 숫자의 합으로 
 # 풀이
 
 ### 설명
-정렬을 하여 이진탐색을 하는 방법을 사용했습니다. 파이썬에서는 시간초과가 나서 C++로 일단 풀이를 작성했습니다.
+정렬을 하여 이진탐색을 하는 방법을 사용했습니다. 파이썬의 코드는 시간이 너무 많이 걸려 sys 모듈을 이용해 정수를 입력받았습니다.
 
 ### 코드
+#### Python
+{% highlight css %}
+import sys
+
+def binary_search(li, l, r, key) :
+	while(l <= r) :
+		mid = (l + r) // 2
+		if(li[mid] == key) : return mid
+		elif(li[mid] < key) : l = mid + 1
+		else : r = mid - 1
+	return -1
+
+n, m = map(int, sys.stdin.readline().split())
+
+n_li = list(map(int, sys.stdin.readline().split()))
+m_li = list(map(int, sys.stdin.readline().split()))
+n_li.sort()
+cnt = 0
+
+for k in m_li :
+	possible = False
+	for i in range(len(n_li)) :
+		x = n_li[i] 
+		if(k <= x) : break
+		else :
+			if(binary_search(n_li, i, n-1, k-x) != -1) : 
+				possible = True
+				break
+	if(possible == True) : cnt += 1
+print(cnt)
+{% endhighlight %}
+
 #### C++
 {% highlight css %}
 #include <stdio.h>
@@ -111,6 +143,10 @@ int main() {
 {% endhighlight %}
 
 ### 기타
+#### Python
+- `Memory` : 11770
+- `Time` : 0.78
+
 #### C++
 - `Memory` : 3160
 - `Time` : 0.006
