@@ -57,6 +57,7 @@ M개의 당첨번호 들 중 실제로 세 카드에 적힌 숫자의 합으로 
 
 ### 코드
 #### C++
+{% highlight css %}
 #include <stdio.h>
 #include <vector>
 #include <algorithm>
