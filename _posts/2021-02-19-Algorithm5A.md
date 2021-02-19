@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "알고리즘 문제해결기법 입문 문제4J"
-date: 2021-02-18
-excerpt: "Python 알고리즘 문제해결기법 입문 문제4J"
-tags: [Python, 알고리즘 문제해결기법 입문, Chapter.4]
+title: "알고리즘 문제해결기법 입문 문제5A"
+date: 2021-02-19
+excerpt: "Python 알고리즘 문제해결기법 입문 문제5A"
+tags: [Python, 알고리즘 문제해결기법 입문, Chapter.5]
 comments: true
 ---
 # 4J

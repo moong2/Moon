@@ -2,8 +2,8 @@
 layout: post
 title: "알고리즘 문제해결기법 입문 문제4I"
 date: 2021-02-18
-excerpt: "C++, Python 알고리즘 문제해결기법 입문 문제4I"
-tags: [C++, Python, 알고리즘 문제해결기법 입문, Chapter.4]
+excerpt: "Python 알고리즘 문제해결기법 입문 문제4I"
+tags: [Python, 알고리즘 문제해결기법 입문, Chapter.4]
 comments: true
 ---
 # 4I
