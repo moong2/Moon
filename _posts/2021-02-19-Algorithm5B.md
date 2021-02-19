@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "알고리즘 문제해결기법 입문 문제5A"
+title: "알고리즘 문제해결기법 입문 문제5B"
 date: 2021-02-19
-excerpt: "Python 알고리즘 문제해결기법 입문 문제5A"
+excerpt: "Python 알고리즘 문제해결기법 입문 문제5B"
 tags: [Python, 알고리즘 문제해결기법 입문, Chapter.5]
 comments: true
 ---
-# 5A
+# 5B
+**이 문제의 코드는 80점을 받은 코드입니다.**
 
 ### 문제
 어느 한 도시에서는 공장 단지가 부도가 나게 되어 넓은 공터가 경매에 올라오게 되었다. 이 공터는 가로와 세로가 각각 N km인 정사각형 모양이며 가로와 세로가 1 km인 정사각형 격자 모양으로 영역을 나누어 개별적으로 판매하고 있다. 
@@ -20,8 +21,8 @@ NxN 격자 모양의 공터에서 KxK 정사각형 크기의 땅을 구매하려
 
 각 테스트케이스의 첫 줄에는 두 자연수 공터의 크기를 나타내는 N과 구매할 땅의 크기를 나타내는 K가 주어진다.
 
-- N은 1이상 100이하의 자연수이다.
-- K는 1이상 10이하의 자연수이다. K는 N보다 작거나 같은 값을 가진다.
+- N은 1이상 300이하의 자연수이다.
+- K는 1이상 300이하의 자연수이다. K는 N보다 작거나 같은 값을 가진다.
 
 이후 N줄에 걸쳐서 공터의 각 행의 정보가 차례로 주어진다.
 
@@ -47,40 +48,10 @@ NxN 격자 모양의 공터에서 KxK 정사각형 크기의 땅을 구매하려
 1
 {% endhighlight %}
 
-### 예시 2
-#### 입력
-{% highlight css %}
-3
-5 3
-1 0 0 1 0
-0 1 0 0 1
-0 0 0 1 0
-0 0 0 0 0
-0 0 1 0 0
-5 3
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-0 0 0 0 0
-5 3
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-1 1 1 1 1
-{% endhighlight %}
-#### 출력
-{% highlight css %}
-1
-0
-9
-{% endhighlight %}
-
 # 풀이
 
 ### 설명
-주어지는 배열의 크기가 그렇게 크지 않으므로 모든 배열을 다 돌아보는 알고리즘을 적용했습니다. 다만, n-k이후에 나오는 인덱스는 k크기만큼 조사를 할 수 없으므로 n-k까지 for문을 설정했습니다. 조사할 인덱스가 결정이 되면 이를 find_trash라는 배열에 주어 폐기물이 존재하는지 검사를 했습니다. 폐기물은 배열에서 1에 해당하므로 trash라는 0으로 초기화 된 변수를 두어 1씩 업데이트를 했습니다. 문제에서는 최소의 폐기물을 구하라고 했으므로 min_trash변수와 find_trash함수에서 리턴되는 값의 최소를 비교해 min_trash에 업데이트를 해주는 방식을 거쳤고, min_trash의 최댓값은 모든 k칸의 정사각형이 폐기물로 차 있을 때가 되므로 k*k로 초기화했습니다.
+슬라이딩 윈도우 알고리즘을 이용했습니다. offset은 조사할 column이 0일 때이므로 이 때는 find_trash함수를 이용합니다. 그리고 1부터 n-k+1까지 column을 옮겨갑니다. 이 때, 계산하지 않을 column을 old_column 계산해야 할 새로운 column을 new_column이라고 했습니다. old_column은 현재 column인덱스의 -1번째에 해당하고, new_column은 현재 인덱스와 k만큼 떨어진 인덱스에 해당합니다. 이 때, 열을 현재 열부터 k만큼 떨어진 열까지 조사를 하며 old_column에 폐기물이 있을 시 trash_slide에서 폐기물의 수를 빼주고, new_column에 폐기물이 있을 시 trash_slide에서 폐기물의 수를 더해줍니다. 그리고 답이 될 trash와 비교를 하여 최소인 값을 trash에 저장합니다. 
 
 ### 코드
 {% highlight css %}
@@ -97,13 +68,19 @@ t = int(input())
 for _ in range(t) :
 	n, k = map(int, sys.stdin.readline().split())
 	arr = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
-	min_trash = k*k
+	trash = k**2
 	for i in range(n-k+1) :
-		for j in range(n-k+1) :
-			min_trash = min(min_trash, find_trash(arr, k, i, j))
-	print(min_trash)
+		trash_slide = find_trash(arr, k, i, 0)
+		trash = min(trash, trash_slide)
+		for j in range(1, n-k+1) :
+			old_column, new_column = j-1, j+k-1
+			for l in range(i, i+k) :
+				if(arr[l][old_column] == 1) : trash_slide -= 1
+				if(arr[l][new_column] == 1) : trash_slide += 1
+			trash = min(trash, trash_slide)
+	print(trash)
 {% endhighlight %}
 
 ### 기타
-- `Memory` : 9676
-- `Time` : 0.678
+- `Memory` : 9750
+- `Time` : 0.4725
